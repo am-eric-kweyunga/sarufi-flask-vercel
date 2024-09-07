@@ -1,11 +1,3 @@
-from flask import Flask
+from sarufi.middleware import create_app
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return 'Hello, World!'
-
-@app.route('/about')
-def about():
-    return 'About'
+app = create_app()
