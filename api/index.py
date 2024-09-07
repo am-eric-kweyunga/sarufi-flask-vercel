@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 #####################################################################################################
 # Adding Blueprints from blueprints
 #####################################################################################################
-from api.sarufi.middleware import sarufi_middleware
+from sarufi.middleware import sarufi_middleware
 
 # Initialize Flask app
 app = Flask(__name__)

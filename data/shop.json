@@ -1,0 +1,21 @@
+{
+    "shop_name": "Barber shop",
+    "shop_location": "123 Main St",
+    "shop_phone": "555-1234",
+    "shop_email": "info@barbershop.com",
+    "shop_website": "www.barbershop.com",
+    "shop_services": [
+        "Haircut",
+        "Shave",
+        "Beard trim"
+    ],
+    "shop_hours": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday"
+    ],
+    "shop_price_range": "$10-$20"
+}
