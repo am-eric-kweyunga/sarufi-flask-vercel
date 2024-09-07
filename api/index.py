@@ -1,7 +1,6 @@
-from sarufi.middleware import create_app
-from flask import jsonify
+from flask import  Flask,jsonify
 
-app = create_app()
+app = Flask(__name__)
 
 @app.route('/')
 def sarufi_middleware_index_route():
