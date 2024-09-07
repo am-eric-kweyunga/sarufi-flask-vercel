@@ -1,7 +1,20 @@
-from flask import Flask, jsonify
+from flask import Blueprint, jsonify, request
+from zenopay import make_payment
 
-def create_app():
-    
-    app = Flask(__name__)
-    
-    return app
+name = "sarufi_middleware"
+sarufi_middleware = Blueprint(name, __name__)
+
+
+@sarufi_middleware.route("/", methods=["POST"])
+def sarufi_payment_middleware():
+    # Get the request data
+    data = request.get_json()
+
+    # making actuall payment with zenopay
+    make_payment(
+        data["customer_email"],
+        data["buyers_name"],
+        data["amount"],
+        data["phone_number"],
+    )
+    return jsonify({"message": "Payment successful!"})
