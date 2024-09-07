@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from zenopay import make_payment
+from api.sarufi.zenopay import make_payment
 
 name = "sarufi_middleware"
 sarufi_middleware = Blueprint(name, __name__)
