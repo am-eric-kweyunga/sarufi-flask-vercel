@@ -1,2 +1,0 @@
-Error: HTTPSConnectionPool(host='api.zeno.africa', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000028CC5C14620>, 'Connection to api.zeno.africa timed out. (connect timeout=None)'))
-Error: HTTPSConnectionPool(host='api.zeno.africa', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002A6BAB262A0>, 'Connection to api.zeno.africa timed out. (connect timeout=None)'))
