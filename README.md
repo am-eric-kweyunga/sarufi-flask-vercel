@@ -29,5 +29,5 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 webhook url 
 ```
-https://2bfa-197-250-226-171.ngrok-free.app
+https://88f9-197-250-226-171.ngrok-free.app
 ```
