@@ -1,12 +1,11 @@
-import requests
-import uuid
-from config import ZENOPAY_ACCOUNT_ID, ZENOPAY_API_KEY, ZENOPAY_API_SECRET
 
-# URL of the API endpoint
-url = "https://api.zeno.africa"
 
 def make_payment(customer_email, buyers_name, amount, phone_number):
-    
+    import requests
+    import uuid
+
+    # URL of the API endpoint
+    url = "https://api.zeno.africa"
     # creating automatic order id
     order_id = str(uuid.uuid4())
     
@@ -17,9 +16,9 @@ def make_payment(customer_email, buyers_name, amount, phone_number):
         'buyer_name': buyers_name,
         'buyer_phone': phone_number,
         'amount': amount,
-        'account_id': ZENOPAY_ACCOUNT_ID,
-        'api_key': ZENOPAY_API_KEY,
-        'secret_key': ZENOPAY_API_SECRET
+        'account_id': "zp82538",
+        'api_key': "",
+        'secret_key': ""
     }
 
     try:
@@ -27,7 +26,9 @@ def make_payment(customer_email, buyers_name, amount, phone_number):
         response = requests.post(url, data=order_data)
         
         # Print the response
-        print(response.text)
+        print(response)
+        return response.json()
+        
 
     except requests.RequestException as e:
         # Log errors to a file

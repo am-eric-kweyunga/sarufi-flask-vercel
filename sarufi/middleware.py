@@ -4,13 +4,20 @@ from sarufi.zenopay import make_payment
 name = "sarufi_middleware"
 sarufi_middleware = Blueprint(name, __name__)
 
-
-@sarufi_middleware.route("/", methods=["POST"])
-def sarufi_payment_middleware():
+@sarufi_middleware.route("/pay", methods=["POST"])
+def sarufi_payment():
     # Get the request data
     data = request.get_json()
     print(data)
-    return jsonify({"text": "Payment is qued!"})
+    
+    res = make_payment(
+        customer_email=data["customer_email"],
+        buyers_name=data["buyers_name"],
+        amount=data["amount"],
+        phone_number=data["phone_number"],
+    )
+    response = jsonify(res)
+    return response
 
 
 @sarufi_middleware.route("/huduma_zilizopo", methods=["POST"])
